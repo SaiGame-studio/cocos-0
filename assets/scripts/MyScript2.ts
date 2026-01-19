@@ -1,8 +1,8 @@
 import { _decorator, Component, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('MyScripts')
-export class MyScripts extends Component {
+@ccclass('MyScript2')
+export class MyScript2 extends Component {
 
     // 1. NUMBER - Kiểu số (điểm, máu, tiền, tốc độ...)
     @property
@@ -30,15 +30,7 @@ export class MyScripts extends Component {
     items: Node[] = [];
 
     start() {
-        // Gọi các hàm ví dụ
-        this.viDuToanTuSoHoc();
-        this.viDuToanTuSoSanh();
-        this.viDuToanTuGan();
-        this.viDuApDungGame();
-    }
-
-    // ========== 1. TOÁN TỬ SỐ HỌC (Arithmetic) ==========
-    viDuToanTuSoHoc() {
+        // ========== 1. TOÁN TỬ SỐ HỌC (Arithmetic) ==========
         let a: number = 10;
         let b: number = 3;
         let c: number = 0;
@@ -59,10 +51,8 @@ export class MyScripts extends Component {
 
         c = a % b;  // Chia lấy dư
         console.log("a % b = " + c);  // 1
-    }
 
-    // ========== 2. TOÁN TỬ SO SÁNH (Comparison) ==========
-    viDuToanTuSoSanh() {
+        // ========== 2. TOÁN TỬ SO SÁNH (Comparison) ==========
         let x: number = 5;
         let y: number = 10;
         let z: boolean = false;
@@ -85,10 +75,8 @@ export class MyScripts extends Component {
 
         z = x !== y; // Khác
         console.log("x !== y: " + z); // true
-    }
 
-    // ========== 3. TOÁN TỬ GÁN (Assignment) ==========
-    viDuToanTuGan() {
+        // ========== 3. TOÁN TỬ GÁN (Assignment) ==========
         let score: number = 100;
 
         console.log("=== Toán tử gán ===");
@@ -112,10 +100,8 @@ export class MyScripts extends Component {
 
         score--;      // score = score - 1
         console.log("score--: " + score);      // 70
-    }
 
-    // ========== 4. ÁP DỤNG VÀO GAME ==========
-    viDuApDungGame() {
+        // ========== ÁP DỤNG VÀO GAME ==========
         console.log("=== Áp dụng vào game ===");
 
         this.playerHP = this.playerHP - 50;  // Mất 50 máu 
@@ -123,7 +109,7 @@ export class MyScripts extends Component {
 
         if (this.playerHP <= 0) {
             this.isCatAlive = false;  // Chết
-        } else {
+        }else{
             this.isCatAlive = true;
         }
 
