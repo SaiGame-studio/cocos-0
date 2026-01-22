@@ -20,7 +20,6 @@ export class MyScripts extends Component {
     @property
     isCatAlive: boolean = true;
 
-
     // 4. NODE - Tham chiếu đến đối tượng trong game
     @property(Node)
     enemy: Node = null;
@@ -29,7 +28,7 @@ export class MyScripts extends Component {
     @property([Node])
     items: Node[] = [];
 
-    start() {
+    start() { //Method, Function
         // Gọi các hàm ví dụ
         this.viDuToanTuSoHoc();
         this.viDuToanTuSoSanh();
@@ -47,7 +46,7 @@ export class MyScripts extends Component {
 
         c = a + b;  // Cộng
         console.log("a + b = " + c);  // 13
-        
+
         c = a - b;  // Trừ
         console.log("a - b = " + c);  // 7
 
@@ -59,6 +58,53 @@ export class MyScripts extends Component {
 
         c = a % b;  // Chia lấy dư
         console.log("a % b = " + c);  // 1
+
+        c = this.tinhToanPhucTap(1, 10);  // Cộng
+        console.log("a + b = " + c);
+
+        c = this.tinhToanPhucTap(5, 1);  // Cộng
+        console.log("a + b = " + c);
+    }
+
+    congHaiSo(a: number, b: number): number {
+        return a + b;
+    }
+
+    // Hàm thực hiện chuỗi các phép tính cộng trừ phức tạp
+    tinhToanPhucTap(a: number, b: number): number {
+        // Bước 1: Cộng a và b
+        let buoc1 = a + b;
+        console.log("Bước 1 (a + b): " + buoc1);
+
+        // Bước 2: Trừ đi tích của a và b
+        let buoc2 = buoc1 - (a * b);
+        console.log("Bước 2 (buoc1 - a*b): " + buoc2);
+
+        // Bước 3: Cộng với bình phương của a
+        let buoc3 = buoc2 + (a * a);
+        console.log("Bước 3 (buoc2 + a²): " + buoc3);
+
+        // Bước 4: Trừ đi bình phương của b
+        let buoc4 = buoc3 - (b * b);
+        console.log("Bước 4 (buoc3 - b²): " + buoc4);
+
+        // Bước 5: Cộng với tổng của a và b nhân 2
+        let buoc5 = buoc4 + ((a + b) * 2);
+        console.log("Bước 5 (buoc4 + (a+b)*2): " + buoc5);
+
+        // Bước 6: Trừ đi hiệu của a và b
+        let buoc6 = buoc5 - (a - b);
+        console.log("Bước 6 (buoc5 - (a-b)): " + buoc6);
+
+        // Bước 7: Cộng với trung bình của a và b
+        let buoc7 = buoc6 + ((a + b) / 2);
+        console.log("Bước 7 (buoc6 + (a+b)/2): " + buoc7);
+
+        // Bước 8: Kết quả cuối cùng - trừ đi 10
+        let ketQua = buoc7 - 10;
+        console.log("Kết quả cuối cùng: " + ketQua);
+
+        return ketQua;
     }
 
     // ========== 2. TOÁN TỬ SO SÁNH (Comparison) ==========
@@ -135,7 +181,7 @@ export class MyScripts extends Component {
     }
 
     update(deltaTime: number) {
-        
+
     }
 }
 
