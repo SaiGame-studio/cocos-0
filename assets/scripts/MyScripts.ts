@@ -30,16 +30,18 @@ export class MyScripts extends Component {
 
     start() { //Method, Function
         // Gọi các hàm ví dụ
+
+        console.log("MyScripts Start");
         this.viDuToanTuSoHoc();
-        this.viDuToanTuSoSanh();
-        this.viDuToanTuGan();
-        this.viDuApDungGame();
+        //this.viDuToanTuSoSanh();
+        //this.viDuToanTuGan();
+        //this.viDuApDungGame();
     }
 
     // ========== 1. TOÁN TỬ SỐ HỌC (Arithmetic) ==========
     viDuToanTuSoHoc() {
         let a: number = 10;
-        let b: number = 3;
+        let b: number = 5;
         let c: number = 0;
 
         console.log("=== Toán tử số học ===");
@@ -59,11 +61,11 @@ export class MyScripts extends Component {
         c = a % b;  // Chia lấy dư
         console.log("a % b = " + c);  // 1
 
-        c = this.tinhToanPhucTap(1, 10);  // Cộng
-        console.log("a + b = " + c);
+        // c = this.tinhToanPhucTap(1, 10);  // Cộng
+        // console.log("a + b = " + c);
 
-        c = this.tinhToanPhucTap(5, 1);  // Cộng
-        console.log("a + b = " + c);
+        // c = this.tinhToanPhucTap(5, 1);  // Cộng
+        // console.log("a + b = " + c);
     }
 
     congHaiSo(a: number, b: number): number {
