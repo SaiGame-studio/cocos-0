@@ -32,10 +32,14 @@ export class MyScripts extends Component {
         // Gọi các hàm ví dụ
 
         console.log("MyScripts Start");
-        this.viDuToanTuSoHoc();
+        // this.viDuToanTuSoHoc();
         //this.viDuToanTuSoSanh();
         //this.viDuToanTuGan();
         //this.viDuApDungGame();
+        this.checkCat(100, 10);
+
+        // this.countToTen();
+        // this.printFruits();
     }
 
     // ========== 1. TOÁN TỬ SỐ HỌC (Arithmetic) ==========
@@ -184,6 +188,48 @@ export class MyScripts extends Component {
 
     update(deltaTime: number) {
 
+    }
+
+    // ========== VÍ DỤ VỀ IF VÀ FOR ==========
+
+    // Ví dụ về IF: Kiểm tra mèo sống hay chết dựa vào máu
+    checkCat(currentHealth: number, damage: number) {
+        console.log("=== Check Cat ===");
+        console.log("Máu ban đầu: " + currentHealth);
+        console.log("Sát thương: " + damage);
+
+        // Trừ máu
+        let healthAfterDamage = currentHealth - damage;
+        console.log("Máu sau khi bị tấn công: " + healthAfterDamage);
+
+        // Kiểm tra mèo còn sống không
+        if (healthAfterDamage > 0) {
+            console.log("Mèo vẫn còn sống!");
+            this.isCatAlive = true;
+        } else {
+            console.log("Mèo đã chết!");
+            this.isCatAlive = false;
+        }
+
+        return healthAfterDamage;
+    }
+
+    // Ví dụ về vòng lặp FOR
+    countToTen() {
+        console.log("=== Đếm từ 1 đến 10 ===");
+        for (let i = 1; i <= 10; i++) {
+            console.log("Số thứ " + i);
+        }
+    }
+
+    // Ví dụ FOR với mảng
+    printFruits() {
+        console.log("=== Danh sách trái cây ===");
+        const fruits = ["Táo", "Cam", "Chuối", "Xoài"];
+
+        for (let i = 0; i < fruits.length; i++) {
+            console.log("Trái cây thứ " + (i + 1) + ": " + fruits[i]);
+        }
     }
 }
 
