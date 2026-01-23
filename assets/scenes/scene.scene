@@ -306,7 +306,7 @@
     "__prefab": null,
     "score": 0,
     "playerName": "Sai Game",
-    "isCatAlive": true,
+    "isCatAlive": false,
     "enemy": null,
     "items": [],
     "_id": "643FeWONpFdKKSm1l1G8Ek"
