@@ -9,7 +9,7 @@ const { ccclass, property } = _decorator;
 export abstract class Animal extends Component {
     
     @property
-    protected _name: string = '';
+    protected nameAnimal: string = '';
 
     @property
     protected _age: number = 0;
@@ -35,11 +35,11 @@ export abstract class Animal extends Component {
      * Getter và Setter - Cách đóng gói dữ liệu
      */
     public getName(): string {
-        return this._name;
+        return this.nameAnimal;
     }
 
     public setName(name: string): void {
-        this._name = name;
+        this.nameAnimal = name;
     }
 
     public getAge(): number {
@@ -64,23 +64,23 @@ export abstract class Animal extends Component {
      */
     public eat(food: string): void {
         this._energy += 10;
-        console.log(`${this._name} đang ăn ${food}. Năng lượng: ${this._energy}`);
+        console.log(`${this.nameAnimal} đang ăn ${food}. Năng lượng: ${this._energy}`);
     }
 
     public sleep(): void {
         this._energy += 20;
-        console.log(`${this._name} đang ngủ. Năng lượng: ${this._energy}`);
+        console.log(`${this.nameAnimal} đang ngủ. Năng lượng: ${this._energy}`);
     }
 
     public move(): void {
         this._energy -= 5;
-        console.log(`${this._name} đang di chuyển. Năng lượng: ${this._energy}`);
+        console.log(`${this.nameAnimal} đang di chuyển. Năng lượng: ${this._energy}`);
     }
 
     /**
      * Phương thức hiển thị thông tin
      */
     public getInfo(): string {
-        return `Tên: ${this._name}, Tuổi: ${this._age}, Năng lượng: ${this._energy}`;
+        return `Tên: ${this.nameAnimal}, Tuổi: ${this._age}, Năng lượng: ${this._energy}`;
     }
 }

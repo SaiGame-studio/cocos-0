@@ -20,19 +20,19 @@ export class Bird extends Animal {
 
     constructor() {
         super();
-        this._name = 'Chim';
+        this.nameAnimal = 'Chim';
     }
 
     start() {
         super.start();
-        console.log(`${this._name} đang đậu trên cành cây...`);
+        console.log(`${this.nameAnimal} đang đậu trên cành cây...`);
     }
 
     /**
      * Implement phương thức abstract
      */
     public makeSound(): void {
-        console.log(`${this._name} kêu: Chíp chíp! 🐦`);
+        console.log(`${this.nameAnimal} kêu: Chíp chíp! 🐦`);
     }
 
     /**
@@ -41,7 +41,7 @@ export class Bird extends Animal {
     public eat(food: string): void {
         if (food === 'hạt') {
             this._energy += 15;
-            console.log(`${this._name} mổ hạt. Năng lượng: ${this._energy}`);
+            console.log(`${this.nameAnimal} mổ hạt. Năng lượng: ${this._energy}`);
         } else {
             super.eat(food);
         }
@@ -52,10 +52,10 @@ export class Bird extends Animal {
      */
     public move(): void {
         if (this.isFlying) {
-            console.log(`${this._name} đang bay trên không...`);
+            console.log(`${this.nameAnimal} đang bay trên không...`);
             this._energy -= 7;
         } else {
-            console.log(`${this._name} đang nhảy trên mặt đất...`);
+            console.log(`${this.nameAnimal} đang nhảy trên mặt đất...`);
             this._energy -= 4;
         }
     }
@@ -66,32 +66,32 @@ export class Bird extends Animal {
     public fly(): void {
         if (this.canFly && this._energy >= 10) {
             this.isFlying = true;
-            console.log(`${this._name} cất cánh bay!`);
+            console.log(`${this.nameAnimal} cất cánh bay!`);
             this._energy -= 10;
         } else if (!this.canFly) {
-            console.log(`${this._name} không thể bay!`);
+            console.log(`${this.nameAnimal} không thể bay!`);
         } else {
-            console.log(`${this._name} quá mệt để bay!`);
+            console.log(`${this.nameAnimal} quá mệt để bay!`);
         }
     }
 
     public land(): void {
         if (this.isFlying) {
             this.isFlying = false;
-            console.log(`${this._name} hạ cánh xuống đất!`);
+            console.log(`${this.nameAnimal} hạ cánh xuống đất!`);
         } else {
-            console.log(`${this._name} đã ở dưới đất rồi!`);
+            console.log(`${this.nameAnimal} đã ở dưới đất rồi!`);
         }
     }
 
     public sing(): void {
-        console.log(`${this._name} đang hót!`);
+        console.log(`${this.nameAnimal} đang hót!`);
         this.makeSound();
         this._energy -= 3;
     }
 
     public buildNest(): void {
-        console.log(`${this._name} đang xây tổ!`);
+        console.log(`${this.nameAnimal} đang xây tổ!`);
         this._energy -= 15;
     }
 

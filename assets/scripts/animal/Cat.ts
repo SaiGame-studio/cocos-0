@@ -17,19 +17,19 @@ export class Cat extends Animal {
 
     constructor() {
         super();
-        this._name = 'Mèo';
+        this.nameAnimal = 'Mèo';
     }
 
     start() {
         super.start();
-        console.log(`${this._name} bắt đầu quan sát xung quanh...`);
+        console.log(`${this.nameAnimal} bắt đầu quan sát xung quanh...`);
     }
 
     /**
      * Implement phương thức abstract
      */
     public makeSound(): void {
-        console.log(`${this._name} kêu: Meo meo! 🐱`);
+        console.log(`${this.nameAnimal} kêu: Meo meo! 🐱`);
     }
 
     /**
@@ -38,7 +38,7 @@ export class Cat extends Animal {
     public eat(food: string): void {
         if (food === 'cá') {
             this._energy += 20; // Mèo thích cá hơn
-            console.log(`${this._name} thích cá lắm! Năng lượng: ${this._energy}`);
+            console.log(`${this.nameAnimal} thích cá lắm! Năng lượng: ${this._energy}`);
         } else {
             super.eat(food);
         }
@@ -48,7 +48,7 @@ export class Cat extends Animal {
      * Override phương thức move
      */
     public move(): void {
-        console.log(`${this._name} di chuyển nhẹ nhàng và êm ái...`);
+        console.log(`${this.nameAnimal} di chuyển nhẹ nhàng và êm ái...`);
         this._energy -= 3; // Mèo di chuyển tốn ít năng lượng hơn
     }
 
@@ -61,17 +61,17 @@ export class Cat extends Animal {
     }
 
     public scratch(): void {
-        console.log(`${this._name} gãi móng!`);
+        console.log(`${this.nameAnimal} gãi móng!`);
         this._energy -= 2;
     }
 
     public climbTree(): void {
-        console.log(`${this._name} trèo cây!`);
+        console.log(`${this.nameAnimal} trèo cây!`);
         this._energy -= 8;
     }
 
     public jump(): void {
-        console.log(`${this._name} nhảy cao!`);
+        console.log(`${this.nameAnimal} nhảy cao!`);
         this._energy -= 5;
     }
 
