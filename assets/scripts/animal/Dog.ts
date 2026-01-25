@@ -17,7 +17,7 @@ export class Dog extends Animal {
      */
     constructor() {
         super(); // Gọi constructor của class cha
-        this._name = 'Chó';
+        this.nameAnimal = 'Chó';
     }
 
     /**
@@ -25,14 +25,15 @@ export class Dog extends Animal {
      */
     start() {
         super.start(); // Gọi phương thức start của class cha
-        console.log(`${this._name} đã sẵn sàng!`);
+        console.log(`${this.nameAnimal} đã sẵn sàng!`);
+        this.bark();
     }
 
     /**
      * Implement phương thức abstract từ class cha
      */
     public makeSound(): void {
-        console.log(`${this._name} kêu: Gâu gâu! 🐕`);
+        console.log(`${this.nameAnimal} kêu: Gâu gâu! 🐕`);
         this._energy -= 2;
     }
 
@@ -41,7 +42,7 @@ export class Dog extends Animal {
      */
     public eat(food: string): void {
         super.eat(food); // Gọi phương thức eat của class cha
-        console.log(`${this._name} vẫy đuôi vui vẻ!`);
+        console.log(`${this.nameAnimal} vẫy đuôi vui vẻ!`);
 
     }
 
@@ -54,17 +55,17 @@ export class Dog extends Animal {
 
     public fetch(): void {
         if (this.isTrained) {
-            console.log(`${this._name} chạy đi lấy bóng!`);
+            console.log(`${this.nameAnimal} chạy đi lấy bóng!`);
             this._energy -= 10;
         } else {
-            console.log(`${this._name} chưa được huấn luyện!`);
+            console.log(`${this.nameAnimal} chưa được huấn luyện!`);
             this._energy -= 5;
         }
     }
 
     public train(): void {
         this.isTrained = true;
-        console.log(`${this._name} đã được huấn luyện!`);
+        console.log(`${this.nameAnimal} đã được huấn luyện!`);
     }
 
     /**
