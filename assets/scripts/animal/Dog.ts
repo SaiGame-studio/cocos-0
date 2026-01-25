@@ -26,7 +26,7 @@ export class Dog extends Animal {
     start() {
         super.start(); // Gọi phương thức start của class cha
         console.log(`${this.nameAnimal} đã sẵn sàng!`);
-        this.bark();
+        // this.makeSound();
     }
 
     /**

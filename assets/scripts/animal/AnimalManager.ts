@@ -8,10 +8,18 @@ const { ccclass, property } = _decorator;
  */
 @ccclass('AnimalManager')
 export class AnimalManager extends Component {
-    
+
     @property([Animal])
     // Danh sách tất cả động vật
     public animals: Animal[] = [];
+
+
+    protected start(): void {
+        let animalCount = this.getAnimalCount();
+        console.log("Animal Count: " + animalCount);
+
+        this.makeAllAnimalsSound();
+    }
 
     /**
      * Lấy số lượng động vật
@@ -25,19 +33,10 @@ export class AnimalManager extends Component {
      */
     public makeAllAnimalsSound(): void {
         console.log('=== Tất cả động vật phát ra tiếng kêu ===');
-        this.animals.forEach(animal => {
-            animal.makeSound();
-        });
-    }
-
-    /**
-     * Lấy thông tin tất cả động vật
-     */
-    public getAllAnimalsInfo(): string {
-        let info = `=== Danh sách ${this.animals.length} động vật ===\n`;
         this.animals.forEach((animal, index) => {
-            info += `${index + 1}. ${animal.getInfo()}\n`;
+            setTimeout(() => {
+                animal.makeSound();
+            }, index * 1000);
         });
-        return info;
     }
 }
