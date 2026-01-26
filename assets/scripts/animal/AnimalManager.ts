@@ -11,8 +11,7 @@ export class AnimalManager extends Component {
 
     @property([Animal])
     // Danh sách tất cả động vật
-    public animals: Animal[] = [];
-
+    protected animals: Animal[] = [];
 
     protected start(): void {
         let animalCount = this.getAnimalCount();
@@ -34,9 +33,14 @@ export class AnimalManager extends Component {
     public makeAllAnimalsSound(): void {
         console.log('=== Tất cả động vật phát ra tiếng kêu ===');
         this.animals.forEach((animal, index) => {
+            console.log(animal.node.name + ": " + animal.getWeight());
             setTimeout(() => {
                 animal.makeSound();
-            }, index * 1000);
+            }, index * 100);
         });
+    }
+
+    public getAnimals(): Animal[] {
+        return this.animals;
     }
 }
