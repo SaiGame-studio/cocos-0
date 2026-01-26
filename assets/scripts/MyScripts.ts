@@ -65,7 +65,7 @@ export class MyScripts extends Component {
         c = a % b;  // Chia lấy dư
         console.log("a % b = " + c);  // 1
 
-        // c = this.tinhToanPhucTap(1, 10);  // Cộng
+        c = this.tinhToanPhucTap(1, 10);  // Cộng
         // console.log("a + b = " + c);
 
         // c = this.tinhToanPhucTap(5, 1);  // Cộng

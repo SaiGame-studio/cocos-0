@@ -7,7 +7,7 @@ const { ccclass, property } = _decorator;
  */
 @ccclass('Animal')
 export abstract class Animal extends Component {
-    
+
     @property
     protected nameAnimal: string = '';
 
@@ -34,8 +34,8 @@ export abstract class Animal extends Component {
         this.randomWeight();
     }
 
-    protected randomWeight(){
-        this.weight = randomRangeInt(1,70);
+    protected randomWeight() {
+        this.weight = randomRangeInt(1, 70);
     }
 
     /**
@@ -89,5 +89,9 @@ export abstract class Animal extends Component {
      */
     public getInfo(): string {
         return `Tên: ${this.nameAnimal}, Tuổi: ${this._age}, Năng lượng: ${this._energy}`;
+    }
+
+    public getWeight(): number {
+        return this.weight;
     }
 }
