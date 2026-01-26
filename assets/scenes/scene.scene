@@ -433,6 +433,7 @@
     "nameAnimal": "Mèo",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "furColor": "Vàng",
     "livesRemaining": 9,
     "_id": "23ixwPCMBDJrAzO/47r+cc"
@@ -495,6 +496,7 @@
     "nameAnimal": "Chó",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "be4fnwUghNMoqYg631Kc++"
   },
@@ -556,6 +558,7 @@
     "nameAnimal": "Chim",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "canFly": true,
     "wingSpan": 30,
     "isFlying": false,
@@ -619,6 +622,7 @@
     "nameAnimal": "Dog 1",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "a6z5vPpNVCC53BfYfzYqem"
   },
@@ -680,6 +684,7 @@
     "nameAnimal": "Dog 2",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "e8uaWaBdtCeavl8PBeyd1f"
   },
@@ -741,6 +746,7 @@
     "nameAnimal": "Dog 3",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "c6RrysH9BHj4ygv5KhPNhq"
   },
@@ -802,6 +808,7 @@
     "nameAnimal": "Dog 4",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "ce61Qsu7dFFbxqinY/EbQc"
   },
@@ -863,6 +870,7 @@
     "nameAnimal": "Dog 5",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "c2bvS8uQRAL5ZqRQBRYA1O"
   },
@@ -924,6 +932,7 @@
     "nameAnimal": "Dog 6",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "05/CQBJMBIfYDWOMn+QImL"
   },
@@ -985,6 +994,7 @@
     "nameAnimal": "Dog 7",
     "_age": 0,
     "_energy": 100,
+    "weight": 1.5,
     "isTrained": false,
     "_id": "6ctOxLdmlKUYvzpMtESlPW"
   },
